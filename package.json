@@ -1,20 +1,20 @@
 {
   "name": "cra-bundler-example",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
+  "source": "entry.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "bin:rollup": "./node_modules/.bin/rollup",
+    "bundle": "yarn bin:rollup -c rollup.config.js",
+    "bundle:watch": "yarn bin:rollup -c rollup.config.js -w -m"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +30,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.0.3",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-url": "^5.0.1",
+    "@svgr/rollup": "^5.4.0",
+    "rollup": "^2.15.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.0",
+    "react": "^16.13",
+    "react-dom": "^16.13"
   }
 }
