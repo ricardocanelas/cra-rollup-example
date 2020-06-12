@@ -6,9 +6,15 @@ Plugins:
 
 - **@rollup/plugin-babel**: Compile your files with Babel
 - **@rollup/plugin-image**: Import JPG, PNG, GIF, SVG, and WebP files
+- **@rollup/plugin-json**: Convert .json files to ES6 modules
 - **@rollup/plugin-node-resolve**: Locate and bundle third-party dependencies in node_modules
 - **@rollup/plugin-url**: Import files as data-URIs or ES Modules
+- **@rollup/pluginutils**: A set of utility functions commonly used.
 - **@svgr/rollup**: import your SVG directly as a React Component.
+- **rollup-plugin-cleanup**: Remove comments, trim trailing spaces, compact empty lines, and normalize line endings in JavaScript files.
+- **rollup-plugin-delete**: Delete the specific directories when the rollup bundle your resource.
+- **rollup-plugin-filesize**: to show filesize in the cli.
+- **rollup-plugin-postcss**: Integration with PostCSS (transforming styles with JS plugins... can lint your CSS, support variables and mixins, transpile future CSS syntax, inline images, and more).
 
 Formats that can bundle:
 

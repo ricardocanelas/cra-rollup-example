@@ -37,20 +37,29 @@
     "@testing-library/user-event": "^7.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^5.0.3",
     "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@rollup/plugin-url": "^5.0.1",
+    "@rollup/pluginutils": "^3.1.0",
     "@svgr/rollup": "^5.4.0",
-    "rollup": "^2.15.0"
+    "node-sass": "^4.14.1",
+    "rollup": "^2.15.0",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-filesize": "^9.0.0",
+    "rollup-plugin-postcss": "^3.1.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.0",
     "react": "^16.13",
+    "react-bootstrap": "^1.0",
     "react-dom": "^16.13"
   }
 }

@@ -1,5 +1,34 @@
 import React__default, { createElement } from 'react';
 import PropTypes from 'prop-types';
+import RButton from 'react-bootstrap/Button';
+
+function styleInject(css, ref) {
+  if (ref === void 0) ref = {};
+  var insertAt = ref.insertAt;
+  if (!css || typeof document === 'undefined') {
+    return;
+  }
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css_248z = ":export {\n  grid-xs: 0;\n  grid-sm: 576px;\n  grid-md: 768px;\n  grid-lg: 992px;\n  grid-xl: 1200px; }\n";
+styleInject(css_248z);
 
 var Button = function Button(_ref) {
   var small = _ref.small,
@@ -7,11 +36,10 @@ var Button = function Button(_ref) {
   var styles = {
     fontSize: small ? 12 : 16
   };
-  return /*#__PURE__*/React__default.createElement("button", {
+  return React__default.createElement(React__default.Fragment, null, React__default.createElement(RButton, {
     style: styles
-  }, children);
+  }, children), React__default.createElement("pre", null, JSON.stringify(css_248z, null, 2)));
 };
-
 Button.displayName = "Button";
 Button.defaultProps = {
   children: null,
